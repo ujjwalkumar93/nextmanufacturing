@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "creation": "2021-04-08 18:40:17.258966",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "item_name",
+  "qty",
+  "uom",
+  "total_weight",
+  "weight_per_unit"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Item Name"
+  },
+  {
+   "fieldname": "qty",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Qty"
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "UOM"
+  },
+  {
+   "fieldname": "weight_per_unit",
+   "fieldtype": "Data",
+   "label": "Weight Per Unit"
+  },
+  {
+   "fieldname": "total_weight",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Total Weight"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-04-08 21:21:33.517126",
+ "modified_by": "Administrator",
+ "module": "Nextmanufacturing",
+ "name": "Additional Items Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

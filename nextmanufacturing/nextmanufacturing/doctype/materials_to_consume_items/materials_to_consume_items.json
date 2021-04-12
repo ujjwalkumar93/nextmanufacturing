@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "creation": "2021-04-10 02:00:14.143663",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "item_name",
+  "uom",
+  "s_warehouse",
+  "has_batch_no",
+  "column_break_6",
+  "qty_to_issue",
+  "qty_issued",
+  "status",
+  "show_details",
+  "section_break_11",
+  "data"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "item_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Item Name"
+  },
+  {
+   "columns": 1,
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "UOM",
+   "options": "UOM",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "s_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Souce Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "has_batch_no",
+   "fieldtype": "Check",
+   "label": "Has Batch No"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "qty_to_issue",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty to Issue "
+  },
+  {
+   "columns": 1,
+   "fieldname": "qty_issued",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty Issued"
+  },
+  {
+   "columns": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Not Assigned\nAssigned"
+  },
+  {
+   "allow_on_submit": 1,
+   "bold": 1,
+   "columns": 1,
+   "fieldname": "show_details",
+   "fieldtype": "Button",
+   "in_list_view": 1,
+   "label": "Add Details"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "data",
+   "fieldtype": "Code",
+   "label": "data"
+  },
+  {
+   "columns": 1,
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-04-10 10:53:00.816112",
+ "modified_by": "Administrator",
+ "module": "Nextmanufacturing",
+ "name": "Materials to Consume Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

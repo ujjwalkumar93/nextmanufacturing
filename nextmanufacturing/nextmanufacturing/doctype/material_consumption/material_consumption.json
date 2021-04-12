@@ -1,0 +1,186 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2021-04-10 01:56:04.103563",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "work_order",
+  "job_card",
+  "s_warehouse",
+  "weight",
+  "column_break_6",
+  "company",
+  "type",
+  "make_pick_list",
+  "get_items_from_pick_list",
+  "cost_of_consumption",
+  "materials_to_consume_section",
+  "materials_to_consume",
+  "pick_list_items_section",
+  "pick_list_item",
+  "material_consumption_detail_section",
+  "material_consumption_detail",
+  "assign_material",
+  "section_break_17",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Sereis",
+   "options": "MC-.YYYY.-.####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "work_order",
+   "fieldtype": "Link",
+   "label": "Work Order",
+   "options": "Work Order",
+   "reqd": 1
+  },
+  {
+   "fieldname": "job_card",
+   "fieldtype": "Link",
+   "label": "Job Card",
+   "options": "Job Card",
+   "read_only": 1
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "\nManual\nPick List",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.type == 'Pick List' && doc.docstatus == 0",
+   "fieldname": "get_items_from_pick_list",
+   "fieldtype": "Button",
+   "label": "Get Items from Pick List"
+  },
+  {
+   "fieldname": "cost_of_consumption",
+   "fieldtype": "Currency",
+   "label": "Cost of Consumption",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type == 'Manual'",
+   "fieldname": "materials_to_consume_section",
+   "fieldtype": "Section Break",
+   "label": "Materials To Consume"
+  },
+  {
+   "depends_on": "eval:doc.type == 'Manual'",
+   "fieldname": "materials_to_consume",
+   "fieldtype": "Table",
+   "label": "Materials To Consume",
+   "options": "Materials to Consume Items"
+  },
+  {
+   "depends_on": "eval:doc.type == 'Pick List'",
+   "fieldname": "pick_list_items_section",
+   "fieldtype": "Section Break",
+   "label": "Pick List Items"
+  },
+  {
+   "fieldname": "pick_list_item",
+   "fieldtype": "Table",
+   "label": "Pick List Item",
+   "no_copy": 1,
+   "options": "Pick List Item",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type == 'Manual'",
+   "fieldname": "material_consumption_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Material Consumption Detail "
+  },
+  {
+   "fieldname": "material_consumption_detail",
+   "fieldtype": "Table",
+   "label": "Material Consumption Detail",
+   "options": "Material Consumption Detail"
+  },
+  {
+   "fieldname": "assign_material",
+   "fieldtype": "Button",
+   "label": "Assign Material"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Material Consumption",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "s_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Source Warehosue",
+   "options": "Warehouse",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "make_pick_list",
+   "fieldtype": "Button",
+   "label": "Make Pick List"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-04-11 16:17:58.272843",
+ "modified_by": "Administrator",
+ "module": "Nextmanufacturing",
+ "name": "Material Consumption",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

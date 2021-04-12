@@ -33,7 +33,11 @@ app_license = "MIT"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+	"Work Order" : "public/js/wo.js",
+	"Stock Entry" : "public/js/stock_entry.js",
+	"Pick List" : "public/js/pick_list.js",
+	}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -91,13 +95,15 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	# "Stock Entry": {
+	# 	"on_submit": ["nextmanufacturing.nextmanufacturing.custom_stock_entry.produce_qty",
+	# 		"nextmanufacturing.nextmanufacturing.custom_stock_entry.change_work_order_status",
+	# 		"nextmanufacturing.nextmanufacturing.custom_stock_entry.set_material_cost"
+	# 		],
+	# 	"on_cancel": "nextmanufacturing.nextmanufacturing.custom_stock_entry.cancel_produce_qty",
+	#},
+}
 
 # Scheduled Tasks
 # ---------------
@@ -129,7 +135,9 @@ app_license = "MIT"
 # ------------------------------
 #
 # override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "nextmanufacturing.event.get_events"
+# 	"erpnext.manufacturing.doctype.work_order.work_order.create_pick_list": "nextmanufacturing.nextmanufacturing.doctype.material_consumption.material_consumption.create_pick_list",
+# 	#"frappe.desk.doctype.event.event.get_events": "nextmanufacturing.event.get_events"
+# 	"erpnext.manufacturing.doctype.pick_list.pick_list.set_item_locations": "nextmanufacturing.nextmanufacturing.doctype.material_consumption.material_consumption.set_item_locations",
 # }
 #
 # each overriding function accepts a `data` argument;

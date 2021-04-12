@@ -1,0 +1,106 @@
+{
+ "actions": [],
+ "creation": "2021-04-10 02:21:56.709638",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "uom",
+  "warehouse",
+  "batch",
+  "column_break_5",
+  "balance_qty",
+  "expiry_date_batch",
+  "life_left_batch",
+  "qty_to_consume",
+  "consume_item",
+  "weight_per_uunit",
+  "type"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "UOM",
+   "options": "UOM",
+   "reqd": 1
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "batch",
+   "fieldtype": "Link",
+   "label": "Batch",
+   "options": "Batch"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "balance_qty",
+   "fieldtype": "Float",
+   "label": "Balance Qty"
+  },
+  {
+   "fieldname": "expiry_date_batch",
+   "fieldtype": "Date",
+   "label": "Expiry Date Batch"
+  },
+  {
+   "fieldname": "life_left_batch",
+   "fieldtype": "Int",
+   "label": "Life Left Batch"
+  },
+  {
+   "fieldname": "qty_to_consume",
+   "fieldtype": "Float",
+   "label": "Qty to Consume"
+  },
+  {
+   "fieldname": "consume_item",
+   "fieldtype": "Link",
+   "label": "Consume Item",
+   "options": "Materials to Consume Items"
+  },
+  {
+   "fieldname": "weight_per_uunit",
+   "fieldtype": "Float",
+   "label": "Weight Per Uunit"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "RM\nPKG"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2021-04-10 02:55:11.717243",
+ "modified_by": "Administrator",
+ "module": "Nextmanufacturing",
+ "name": "Material Consumption Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
